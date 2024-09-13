@@ -7,124 +7,134 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <style>
-       html, body {
-    height: 100%; /* Ensure the body and html take the full height of the viewport */
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
 
-header {
-    background-color: #4a90e2;
-    color: white;
-    padding: 50px 0;
-    text-align: center;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
 
-.content {
-    padding: 40px 20px;
-    flex: 1; /* This makes the content grow and fill the available space */
-}
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
 
-h2 {
-    margin-bottom: 20px;
-}
+        .content {
+            flex: 1;
+            padding: 40px 20px;
+        }
 
-.pricing {
-    margin-bottom: 40px;
-}
+        h2 {
+            margin-bottom: 20px;
+        }
 
-.pricing-card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
+        .pricing {
+            margin-bottom: 40px;
+        }
 
-.pricing-card:hover {
-    transform: scale(1.05);
-}
+        .pricing-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
 
-.pricing-card .card-header {
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
-}
+        .pricing-card:hover {
+            transform: scale(1.05);
+        }
 
-.button {
-    padding: 12px 20px;
-    font-size: 1.1em;
-    text-align: center;
-    display: inline-block;
-    margin: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        .pricing-card .card-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 1.3em;
+        }
 
-.button.upi {
-    background-color: #007bff;
-    color: white;
-}
+        .pricing-card .card-body ul {
+            font-size: 1.2em; /* Increased text size */
+        }
 
-.button.whatsapp {
-    background-color: #25d366;
-    color: white;
-}
+        .button {
+            padding: 12px 20px;
+            font-size: 1.1em;
+            text-align: center;
+            display: inline-block;
+            margin: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-.button:hover {
-    background-color: #0056b3;
-}
+        .button.upi {
+            background-color: #007bff;
+            color: white;
+        }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-}
+        .button.whatsapp {
+            background-color: #25d366;
+            color: white;
+        }
 
-/* Button animations */
-.shiny-button {
-    position: relative;
-    overflow: hidden;
-}
+        .button:hover {
+            background-color: #0056b3;
+        }
 
-.shiny-button:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.5);
-    transform: rotate(45deg);
-    transition: all 0.5s ease-in-out;
-}
+        /* Sticky footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto; /* Push footer to the bottom */
+        }
 
-.shiny-button:hover:before {
-    top: 100%;
-    left: 100%;
-}
+        /* Button animations */
+        .shiny-button {
+            position: relative;
+            overflow: hidden;
+        }
 
-/* Modal styles */
-.modal-content {
-    background-color: #221b31;
-    color: white;
-    text-align: center;
-}
+        .shiny-button:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: rotate(45deg);
+            transition: all 0.5s ease-in-out;
+        }
 
-.modal-footer {
-    justify-content: center;
-}
+        .shiny-button:hover:before {
+            top: 100%;
+            left: 100%;
+        }
 
-.modal-footer .btn {
-    background-color: #007bff;
-    color: white;
-    border-radius: 8px;
-}
+        /* Modal styles */
+        .modal-content {
+            background-color: #221b31;
+            color: white;
+            text-align: center;
+        }
+
+        .modal-footer {
+            justify-content: center;
+        }
+
+        .modal-footer .btn {
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -145,7 +155,7 @@ footer {
                     <div class="card-body">
                         <ul>
                             <li><strong>Good apps:</strong> Completely free ₹0</li>
-                            <li><strong>Decent apps:</strong> ₹150</li>
+                            <li><strong>Decent apps:</strong> ₹150 + ₹10 for every update</li>
                         </ul>
                     </div>
                 </div>
@@ -158,7 +168,7 @@ footer {
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li>Price depends on app quality: <br> ₹250 to ₹382</li>
+                            <li>Price depends on app quality: ₹250 to ₹382</li>
                         </ul>
                     </div>
                 </div>
@@ -167,10 +177,9 @@ footer {
             <div class="pricing">
                 <h3>Update Prices</h3>
                 <ul>
-                    <li>Update every single thing at a time, <br>
-                    Single text, link, or logo update: ₹10</li>
-                    <li>Multiple items (at a Time): ₹5 per item (Ex: 5+5+5... )</li>
-                    <li>App Bundle (AAB/APK) update: ₹16 to ₹22</li>
+                    <li>Update a single thing at a time: text, link, logo, or details → ₹10</li>
+                    <li>Update multiple items at a time → ₹5 for each additional item</li>
+                    <li>App Bundle (AAB/APK) update → ₹16 to ₹22</li>
                 </ul>
             </div>
 
