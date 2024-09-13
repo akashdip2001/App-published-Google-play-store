@@ -88,6 +88,20 @@
             top: 100%;
             left: 100%;
         }
+        /* Modal styles */
+        .modal-content {
+            background-color: #221b31;
+            color: white;
+            text-align: center;
+        }
+        .modal-footer {
+            justify-content: center;
+        }
+        .modal-footer .btn {
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -136,9 +150,28 @@
                 </ul>
             </div>
 
+            <!-- Payment Buttons -->
             <div class="buttons">
-                <a class="button upi shiny-button" href="upi://pay?pa=7076033011@ibl&pn=AkashdipMahapatra&cu=INR" target="_blank">Pay via UPI</a>
+                <a class="button upi shiny-button" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay via UPI</a>
                 <a class="button whatsapp shiny-button" href="https://wa.me/917076033011" target="_blank">WhatsApp Me</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Payment Modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentModalLabel">Scan & Pay Using PhonePe</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="img/qr.jpg" alt="PhonePe QR Code" class="img-fluid">
+            </div>
+            <div class="modal-footer">
+                <a class="btn" href="upi://pay?pa=7076033011@ibl&pn=AkashdipMahapatra&cu=INR" target="_blank">Pay by UPI</a>
             </div>
         </div>
     </div>
