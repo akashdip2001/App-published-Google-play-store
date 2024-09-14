@@ -1,0 +1,27 @@
+account login - sixsa...
+mail.me.akashdip2001@gmail.com
+63BDF7884BDE2B69316F2F2BE44664512E91
+
+Server
+smtp.elasticemail.com
+
+Port
+2525
+
+Your security token is f0458566-a635-48b0-8732-689319ef7d2b Please take note of this.
+Your security token is f1fd93e4-78df-4474-8db5-80daf880c520 Please take note of this.
+
+
+contact - 
+SecureToken: "f1fd93e4-78df-4474-8db5-80daf880c520",
+		To: "mail.me.akashdip2001@gmail.com",
+		From: "mail.me.akashdip2001@gmail.com",
+		Subject: "Contact freecadApp 2.o",
+		Body: messageBody
+
+for OTP -
+SecureToken: "f1fd93e4-78df-4474-8db5-80daf880c520",
+		To: email, //send msg to enter email
+		From: "mail.me.akashdip2001@gmail.com",
+		Subject: "Contact freecadApp 2.o",
+		Body: messageBody
